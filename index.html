@@ -29,7 +29,7 @@
         <p class="console-tagline">Your next move, clear.</p>
         <p class="hero-lead">See revenue, pipeline, cash and workload in one view—plus the next decision.</p>
         <div class="actions">
-          <a class="button primary" href="#live-dashboard">Try the prototype</a>
+          <a class="button primary" href="#business-example">See a business like yours</a>
           <a class="button" href="services.html">See packages and pricing</a>
         </div>
         <div class="hero-trust"><span>No AI knowledge required</span><span>You own the finished dashboard</span><span>Fixed-scope projects from €1,250</span></div>
@@ -83,30 +83,38 @@
       </div>
     </section>
 
-    <section class="owner-examples" aria-labelledby="examples-title">
+    <section class="owner-examples" id="business-example" aria-labelledby="examples-title">
       <div class="wrap">
-        <div class="section-head compact-head"><div><p class="kicker">Illustrative examples</p><h2 id="examples-title">Which situation feels familiar?</h2></div><p>Synthetic figures—choose a business type and explore the working dashboard.</p></div>
-        <div class="example-grid">
-          <a class="example-card" href="sample.html?business=consultant"><span>Independent consultant</span><div class="example-stat"><strong>68%</strong><small>next month booked</small></div><h3>More leads—or more room to deliver?</h3><p>Compare confirmed work, likely deals and available days.</p><b>Explore this example →</b></a>
-          <a class="example-card" href="sample.html?business=agency"><span>Small agency</span><div class="example-stat"><strong>96%</strong><small>delivery capacity</small></div><h3>Can we take the next project?</h3><p>See pipeline, workload and margin before saying yes.</p><b>Explore this example →</b></a>
-          <a class="example-card" href="sample.html?business=coach"><span>Coach or practitioner</span><div class="example-stat"><strong>7</strong><small>open appointments</small></div><h3>Is the gap retention or demand?</h3><p>Review bookings, repeat clients and unused time together.</p><b>Explore this example →</b></a>
+        <div class="section-head compact-head"><div><p class="kicker">Illustrative walkthrough</p><h2 id="examples-title">From scattered numbers to one decision.</h2></div><p>Choose a business type. The example figures are synthetic; the decision pattern is what Kiln builds around your real business.</p></div>
+        <div class="example-tabs" role="tablist" aria-label="Choose an illustrative business">
+          <button class="example-tab active" type="button" data-example="consultant" aria-selected="true">Independent consultant</button>
+          <button class="example-tab" type="button" data-example="agency" aria-selected="false">Small agency</button>
+          <button class="example-tab" type="button" data-example="coach" aria-selected="false">Coach or practitioner</button>
+        </div>
+        <div class="walkthrough-grid">
+          <article class="walkthrough-card before-card"><span class="walkthrough-num">01 · Before</span><h3 id="exampleQuestion">Do I need more leads—or more room to deliver?</h3><div class="source-pills" id="exampleSources"><span>Email leads</span><span>Calendar</span><span>Invoices</span><span>Spreadsheet</span></div><p id="exampleBefore">The answer is split across four places and estimated manually.</p></article>
+          <article class="walkthrough-card dashboard-card"><span class="walkthrough-num">02 · One owner view</span><div class="walkthrough-metrics"><div><strong id="exampleMetricOne">68%</strong><small id="exampleLabelOne">next month booked</small></div><div><strong id="exampleMetricTwo">€18k</strong><small id="exampleLabelTwo">confirmed revenue</small></div><div><strong id="exampleMetricThree">6 days</strong><small id="exampleLabelThree">still available</small></div></div><p id="exampleDashboard">Confirmed work, likely deals and free delivery days are visible together.</p></article>
+          <article class="walkthrough-card action-card"><span class="walkthrough-num">03 · Decision</span><p class="decision-prompt">Next move</p><h3 id="exampleDecision">Keep two days available for sales.</h3><p id="exampleReason">Do not fill the month with lower-margin work before the strongest leads are decided.</p><a id="exampleLink" href="sample.html?business=consultant">Explore the interactive example →</a></article>
         </div>
       </div>
+    </section>
+
+    <section class="wrap artifact-section" aria-labelledby="artifacts-title">
+      <div class="section-head compact-head"><div><p class="kicker">What you receive</p><h2 id="artifacts-title">Useful after the project ends.</h2></div><p>Editable business tools—not a presentation that disappears after one meeting.</p></div>
+      <div class="artifact-grid">
+        <article class="artifact-card"><div class="artifact-preview map-preview"><span>Decision</span><b>→</b><span>5 KPIs</span><b>→</b><span>Sources</span></div><h3>KPI and data map</h3><p>What each number means, where it comes from and who uses it.</p></article>
+        <article class="artifact-card"><div class="artifact-preview dashboard-preview"><div><span>Revenue</span><strong>€42.8k</strong></div><div><span>Capacity</span><strong>84%</strong></div><i></i><i></i><i></i><i></i></div><h3>Working dashboard</h3><p>One owner view connected to the business question you need to answer.</p></article>
+        <article class="artifact-card"><div class="artifact-preview brief-preview"><small>Weekly owner brief</small><strong>Protect capacity before adding leads.</strong><span>2 actions ready</span></div><h3>Decision brief</h3><p>What changed, why it matters and what needs your judgment next.</p></article>
+      </div>
+      <a class="text-cta" href="deliverables.html">Inspect every deliverable →</a>
     </section>
 
     <section class="wrap section offer-section" id="offers">
       <div class="section-head compact-head"><div><p class="kicker">Start at the right size</p><h2>Clear scope. Fixed price.</h2></div><p>Begin with one useful operating view. Add complexity only when it earns its place.</p></div>
       <div class="offer-path clear-offers">
-        <article class="offer-step"><span class="offer-num">01 · Diagnose</span><h3>Dashboard Diagnostic</h3><p>Decisions, KPIs and the simplest useful first version.</p><span class="price">60 minutes · €250 excl. VAT</span><a href="services.html#diagnostic">What you receive →</a></article>
-        <article class="offer-step featured-offer"><span class="offer-num">02 · Build for one owner</span><h3>Solo Business Dashboard</h3><p>One clear operating view for an independent business.</p><span class="price">About 2 weeks · €1,250 excl. VAT</span><a href="services.html#solo">See the scope →</a></article>
-        <article class="offer-step"><span class="offer-num">03 · Run the team</span><h3>Small Business Dashboard</h3><p>Connected numbers, automatic refresh and a decision brief.</p><span class="price">About 3 weeks · €3,500 excl. VAT</span><a href="services.html#business">See the scope →</a></article>
-      </div>
-    </section>
-
-    <section class="sample-band">
-      <div class="wrap sample-grid sample-grid-short">
-        <div class="sample-copy"><p class="eyebrow">Explore the prototype</p><h2>Change the numbers. See the decision.</h2><p>Try the synthetic business model yourself.</p><div class="actions"><a class="button primary" href="sample.html">Open the dashboard</a><a class="button" href="deliverables.html">See what you receive</a></div></div>
-        <a class="sample-visual-link" href="sample.html" aria-label="Open the full interactive business dashboard"><div class="mini-brief"><div class="mini-brief-top"><span>Weekly owner brief</span><span class="mini-status">Ready</span></div><p class="mini-label">Recommended action</p><h3>Protect capacity before increasing demand.</h3><div class="mini-chart" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div><div class="mini-footer"><span>Inspect the signals</span><span>→</span></div></div></a>
+        <article class="offer-step"><span class="offer-fit">Start here if you are unsure</span><span class="offer-num">01 · Diagnose</span><h3>Dashboard Diagnostic</h3><p>Leave with five essential KPIs, a source map and a first-view sketch.</p><span class="price">60 minutes · €250 excl. VAT</span><a href="services.html#diagnostic">See the named outputs →</a></article>
+        <article class="offer-step featured-offer"><span class="offer-fit">Most independent businesses start here</span><span class="offer-num">02 · Build for one owner</span><h3>Solo Business Dashboard</h3><p>A working owner view, metric definitions and handover.</p><span class="price">About 2 weeks · €1,250 excl. VAT</span><a href="services.html#solo">See the complete scope →</a></article>
+        <article class="offer-step"><span class="offer-fit">For multiple people or systems</span><span class="offer-num">03 · Run the team</span><h3>Small Business Dashboard</h3><p>Connected numbers, automatic refresh and a decision brief.</p><span class="price">About 3 weeks · €3,500 excl. VAT</span><a href="services.html#business">See the complete scope →</a></article>
       </div>
     </section>
 
@@ -115,7 +123,7 @@
       <div class="proof-points"><p><strong>Commercial measurement</strong><br>SQL, KPI design and Tableau reporting.</p><p><strong>Complex digital delivery</strong><br>Products and workflows across five platforms and regions.</p><p><strong>Applied AI products</strong><br>LLM workflows with quality checks and human review.</p><a class="button" href="work.html">See the background</a></div>
     </section>
 
-    <section class="final-cta"><div class="wrap final-grid"><h2>What do you need to see in one place?</h2><div><p>Answer a few simple questions. No technical language required.</p><a class="button" href="start.html">Describe your starting point</a></div></div></section>
+    <section class="final-cta"><div class="wrap final-grid"><h2>Start with your five essential numbers.</h2><div><p>Describe the report you build today. No technical language required.</p><a class="button" href="start.html">Map my starting point</a></div></div></section>
   </main>
 
   <footer><div class="wrap"><div class="footer-grid"><a class="brand" href="index.html">kiln<span>.</span></a><div class="footer-links"><a href="services.html">Services</a><a href="work.html">Experience</a><a href="deliverables.html">Deliverables</a><a href="sample.html">Prototype</a><a href="value.html">Cost check</a><a href="security.html">Security</a><a href="privacy.html">Privacy</a></div></div><p class="legal">Kiln Life · Netherlands · KvK: 42183356 · <a href="start.html">Contact</a></p></div></footer>
@@ -139,6 +147,20 @@
         document.getElementById('decisionTitle').textContent = state.title;
         document.getElementById('decisionText').textContent = state.text;
         document.getElementById('decisionActions').innerHTML = state.actions.map(a => `<li>${a}</li>`).join('');
+      }));
+      const examples = {
+        consultant:{question:'Do I need more leads—or more room to deliver?',sources:['Email leads','Calendar','Invoices','Spreadsheet'],before:'The answer is split across four places and estimated manually.',metrics:[['68%','next month booked'],['€18k','confirmed revenue'],['6 days','still available']],dashboard:'Confirmed work, likely deals and free delivery days are visible together.',decision:'Keep two days available for sales.',reason:'Do not fill the month with lower-margin work before the strongest leads are decided.',href:'sample.html?business=consultant'},
+        agency:{question:'Can we take the next project without hurting delivery?',sources:['CRM','Project plan','Timesheets','Accounting'],before:'Pipeline and workload are reviewed separately, so the constraint appears late.',metrics:[['96%','delivery capacity'],['€42k','qualified pipeline'],['1 project','below target margin']],dashboard:'Likely sales, committed work and project margin are compared in one view.',decision:'Reserve support before accepting the next project.',reason:'The pipeline is healthy, but next month is already above sustainable capacity.',href:'sample.html?business=agency'},
+        coach:{question:'Is the booking gap caused by retention or demand?',sources:['Booking tool','Payments','Client list','Calendar'],before:'Open appointments are visible, but the reason behind them is not.',metrics:[['7','open appointments'],['41%','repeat bookings'],['72%','schedule filled']],dashboard:'Bookings, returning clients and unused time show where the gap starts.',decision:'Rebook current clients before increasing ad spend.',reason:'Retention is the clearer near-term opportunity; test demand after the rebooking cycle.',href:'sample.html?business=coach'}
+      };
+      const exampleIds=['Question','Before','Dashboard','Decision','Reason'];
+      document.querySelectorAll('.example-tab').forEach(tab => tab.addEventListener('click', () => {
+        const selected=examples[tab.dataset.example];
+        document.querySelectorAll('.example-tab').forEach(button=>{button.classList.toggle('active',button===tab);button.setAttribute('aria-selected',button===tab?'true':'false')});
+        exampleIds.forEach(id=>document.getElementById('example'+id).textContent=selected[id.toLowerCase()]);
+        document.getElementById('exampleSources').innerHTML=selected.sources.map(source=>`<span>${source}</span>`).join('');
+        selected.metrics.forEach((metric,index)=>{const suffix=['One','Two','Three'][index];document.getElementById('exampleMetric'+suffix).textContent=metric[0];document.getElementById('exampleLabel'+suffix).textContent=metric[1]});
+        document.getElementById('exampleLink').href=selected.href;
       }));
     })();
   </script>
