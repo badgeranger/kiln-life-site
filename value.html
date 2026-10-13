@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Manual reporting cost check — Kiln</title>
+  <meta name="description" content="Estimate the time and internal cost currently spent assembling recurring business reports.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml"><meta property="og:type" content="website"><meta property="og:site_name" content="Kiln"><meta property="og:title" content="Manual reporting cost check — Kiln"><meta property="og:image" content="https://kiln.life/og-card.png"><meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+  <header class="wrap top"><a class="brand" href="index.html">kiln<span>.</span></a><nav aria-label="Primary"><a href="services.html">Services</a><a href="work.html">Experience</a><a href="sample.html">Live prototype</a><a href="security.html">Security</a><a class="nav-cta" href="start.html">Start here</a></nav></header>
+  <main>
+    <section class="wrap start-hero"><a class="crumb" href="index.html">← Home</a><p class="eyebrow">Free browser calculator</p><h1>What does manual reporting already cost?</h1><p class="lead">Estimate the time spent collecting numbers, checking spreadsheets and rebuilding the same report. The calculation stays in your browser and does not claim that all of this time can be removed.</p></section>
+
+    <section class="wrap value-layout">
+      <form class="value-form" id="valueForm">
+        <div class="form-head"><p class="kicker">Your current process</p><h2>Use your own assumptions.</h2></div>
+        <label>Hours spent each week<input id="weeklyHours" type="number" min="0" max="80" step="0.5" value="4"></label>
+        <label>People involved<input id="people" type="number" min="1" max="50" step="1" value="1"></label>
+        <label>Approximate hourly value or cost (€)<input id="hourlyRate" type="number" min="0" max="1000" step="5" value="60"></label>
+        <label>Share of this time that might be reduced
+          <select id="reduction"><option value="25">25% — cautious</option><option value="50" selected>50% — moderate</option><option value="75">75% — high</option></select>
+        </label>
+        <label>Dashboard option to compare
+          <select id="projectCost"><option value="1250">Solo Business Dashboard · €1,250</option><option value="3500">Small Business Dashboard · €3,500</option><option value="6500">Advanced Dashboard &amp; Automation · from €6,500</option></select>
+        </label>
+        <p class="note">The estimate uses 48 working weeks per year. It excludes software, maintenance and the value of faster or better decisions.</p>
+      </form>
+
+      <div class="value-results" aria-live="polite">
+        <p class="kicker">Illustrative result</p>
+        <div class="value-main"><span>Current annual reporting cost</span><strong id="annualCost">€11,520</strong></div>
+        <div class="value-grid"><div><span>Time used per year</span><strong id="annualHours">192h</strong></div><div><span>Potential time returned</span><strong id="savedHours">96h</strong></div><div><span>Potential cost returned</span><strong id="savedCost">€5,760</strong></div><div><span>Simple payback estimate</span><strong id="payback">2.6 months</strong></div></div>
+        <div class="value-warning"><strong>This is not a savings promise.</strong><p>It is a way to compare the current manual effort with the price of a project. A diagnostic confirms which tasks can actually be simplified and which still require human work.</p></div>
+        <a class="button primary" href="start.html?package=diagnostic">Check the real process</a>
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap"><div class="footer-grid"><a class="brand" href="index.html">kiln<span>.</span></a><div class="footer-links"><a href="services.html">Services</a><a href="work.html">Experience</a><a href="deliverables.html">Deliverables</a><a href="sample.html">Prototype</a><a href="privacy.html">Privacy</a></div></div><p class="legal">Kiln · Netherlands · <a href="start.html">Contact</a></p></div></footer>
+  <script>
+    (() => {
+      const ids=['weeklyHours','people','hourlyRate','reduction','projectCost'];
+      const euro=new Intl.NumberFormat('en-NL',{style:'currency',currency:'EUR',maximumFractionDigits:0});
+      const render=()=>{
+        const hours=Math.max(0,+document.getElementById('weeklyHours').value||0);
+        const people=Math.max(1,+document.getElementById('people').value||1);
+        const rate=Math.max(0,+document.getElementById('hourlyRate').value||0);
+        const reduction=Math.max(0,+document.getElementById('reduction').value||0)/100;
+        const project=Math.max(0,+document.getElementById('projectCost').value||0);
+        const annualHours=hours*people*48;
+        const annualCost=annualHours*rate;
+        const savedHours=annualHours*reduction;
+        const savedCost=annualCost*reduction;
+        const monthlyReturn=savedCost/12;
+        const payback=monthlyReturn>0?project/monthlyReturn:null;
+        document.getElementById('annualHours').textContent=`${Math.round(annualHours)}h`;
+        document.getElementById('annualCost').textContent=euro.format(annualCost);
+        document.getElementById('savedHours').textContent=`${Math.round(savedHours)}h`;
+        document.getElementById('savedCost').textContent=euro.format(savedCost);
+        document.getElementById('payback').textContent=payback===null?'Not available':`${payback.toFixed(1)} months`;
+      };
+      ids.forEach(id=>document.getElementById(id).addEventListener('input',render));
+      render();
+    })();
+  </script>
+</body>
+</html>
