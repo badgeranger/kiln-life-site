@@ -1,106 +1,36 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Start a dashboard enquiry — Kiln</title>
-  <meta name="description" content="Describe the report or business view you need. No technical or AI knowledge required.">
-  <link rel="icon" href="favicon.svg" type="image/svg+xml"><meta property="og:type" content="website"><meta property="og:site_name" content="Kiln"><meta property="og:title" content="Start a dashboard enquiry — Kiln"><meta property="og:image" content="https://kiln.life/og-card.png"><meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="site.css">
-</head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Start a dashboard project — Kiln</title><meta name="description" content="Describe the business view you need. No technical brief or confidential data required."><link rel="icon" href="favicon.svg" type="image/svg+xml"><meta property="og:type" content="website"><meta property="og:site_name" content="Kiln"><meta property="og:title" content="Start a dashboard project — Kiln"><meta property="og:image" content="https://kiln.life/og-card.png"><link rel="stylesheet" href="site.css"></head>
 <body>
-  <header class="wrap top"><a class="brand" href="index.html">kiln<span>.</span></a><nav aria-label="Primary"><a href="services.html">Services</a><a href="work.html">Experience</a><a href="sample.html">Live prototype</a><a href="security.html">Security</a><a class="nav-cta" href="start.html">Start here</a></nav></header>
-  <main>
-    <section class="wrap start-hero"><a class="crumb" href="index.html">← Home</a><p class="eyebrow">Dashboard enquiry</p><h1>Start with the business problem—not the technology.</h1><p class="lead">You do not need to understand dashboards, integrations or AI. Describe what you currently check by hand and what you wish you could understand faster.</p></section>
-
-    <section class="wrap enquiry-layout">
-      <aside class="enquiry-guide">
-        <p class="kicker">What happens next</p>
-        <ol><li><span>1</span><div><strong>You describe the current situation</strong><p>Everyday language is enough. Do not send passwords, customer records or confidential files.</p></div></li><li><span>2</span><div><strong>Kiln checks whether the problem is a fit</strong><p>You receive a recommendation for the smallest useful starting point.</p></div></li><li><span>3</span><div><strong>Nothing starts without an agreed scope</strong><p>Price, inputs, outputs, tools and data boundaries are confirmed before work begins.</p></div></li></ol>
-        <div class="privacy-box"><strong>Privacy-first form</strong><p>This page does not submit or store your answers. The final button opens your email app with the text prepared. You can review and edit it before sending.</p></div>
-      </aside>
-
-      <form class="enquiry-form" id="enquiryForm">
-        <div class="form-head"><p class="kicker">About five minutes</p><h2>Describe your starting point.</h2><p>Fields marked * are required.</p></div>
-
-        <label>What kind of business is this? *
-          <select id="businessType" required>
-            <option value="">Choose the closest option</option>
-            <option>Independent consultant or freelancer</option>
-            <option>Coach or practitioner</option>
-            <option>Agency or professional-service team</option>
-            <option>Other small service business</option>
-          </select>
-        </label>
-
-        <label>What do you currently check, calculate or report by hand? *
-          <textarea id="currentProcess" rows="5" required placeholder="Example: Every Friday I copy invoices, leads and project hours into one spreadsheet."></textarea>
-        </label>
-
-        <label>What do you wish you could see or understand faster? *
-          <textarea id="desiredView" rows="5" required placeholder="Example: I want to know whether next month is profitable and whether I have room for another client."></textarea>
-        </label>
-
-        <label>Which tools or files are involved?
-          <input id="tools" type="text" placeholder="Example: Excel, Google Sheets, Moneybird, Stripe, Notion, HubSpot">
-        </label>
-
-        <label>How often do you need this view?
-          <select id="frequency"><option>Weekly</option><option>Daily</option><option>Monthly</option><option>Only when planning</option><option>Not sure</option></select>
-        </label>
-
-        <label>Which starting point are you considering?
-          <select id="packageChoice">
-            <option value="not-sure">Not sure—please recommend</option>
-            <option value="diagnostic">Dashboard Diagnostic · €250 excl. VAT</option>
-            <option value="solo">Solo Business Dashboard · €1,250 excl. VAT</option>
-            <option value="business">Small Business Dashboard · €3,500 excl. VAT</option>
-            <option value="advanced">Advanced Dashboard &amp; Automation · from €6,500 excl. VAT</option>
-          </select>
-        </label>
-
-        <div class="form-two">
-          <label>Your email address *<input id="replyEmail" type="email" required placeholder="you@business.com"></label>
-          <label>Preferred timing<select id="timing"><option>As soon as practical</option><option>Within one month</option><option>Within three months</option><option>Just exploring</option></select></label>
-        </div>
-
-        <label>Anything else Kiln should know?
-          <textarea id="notes" rows="3" placeholder="Optional context. Please do not include passwords or sensitive personal data."></textarea>
-        </label>
-
-        <div class="form-actions"><button class="button primary" type="submit">Prepare my email</button><button class="button" type="button" id="copyEnquiry">Copy answers</button></div>
-        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
-      </form>
-    </section>
-
-    <section class="wrap ai-plain"><div><p class="kicker">Where AI may help</p><h2>Optional assistance, not an automatic boss.</h2></div><div><p>The dashboard can work without AI. When AI is useful, it can draft a short explanation of what changed or identify questions worth checking.</p><p><strong>The numbers remain calculated from agreed sources. The suggested interpretation remains reviewable. The business decision remains yours.</strong></p></div></section>
-  </main>
-  <footer><div class="wrap"><div class="footer-grid"><a class="brand" href="index.html">kiln<span>.</span></a><div class="footer-links"><a href="services.html">Services</a><a href="work.html">Experience</a><a href="deliverables.html">Deliverables</a><a href="sample.html">Prototype</a><a href="security.html">Security</a><a href="privacy.html">Privacy</a></div></div><p class="legal">Kiln Life · Netherlands · KvK: 42183356</p></div></footer>
-
-  <script>
-    (() => {
-      const form = document.getElementById('enquiryForm');
-      const status = document.getElementById('formStatus');
-      const ids = ['businessType','currentProcess','desiredView','tools','frequency','packageChoice','replyEmail','timing','notes'];
-      const labels = {businessType:'Business type',currentProcess:'Current manual process',desiredView:'What I want to see',tools:'Tools or files',frequency:'Needed',packageChoice:'Starting package',replyEmail:'Reply email',timing:'Timing',notes:'Additional context'};
-      const params = new URLSearchParams(location.search);
-      const requested = params.get('package');
-      if (requested && [...document.getElementById('packageChoice').options].some(o => o.value === requested)) document.getElementById('packageChoice').value = requested;
-      const buildMessage = () => ids.map(id => `${labels[id]}:\n${document.getElementById(id).value.trim() || 'Not provided'}`).join('\n\n');
-      form.addEventListener('submit', event => {
-        event.preventDefault();
-        if (!form.reportValidity()) return;
-        const subject = 'Business dashboard enquiry';
-        const body = `Hello Kiln,\n\nI would like to discuss a business dashboard.\n\n${buildMessage()}\n\nI understand that no confidential data or system access should be shared before scope and data handling are agreed.`;
-        status.textContent = 'Opening your email app. Review the prepared message before sending.';
-        location.href = `mailto:somin@kiln.life?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      });
-      document.getElementById('copyEnquiry').addEventListener('click', async () => {
-        if (!form.reportValidity()) return;
-        try { await navigator.clipboard.writeText(buildMessage()); status.textContent = 'Your answers were copied. You can paste them into any email to Kiln.'; }
-        catch { status.textContent = 'Copy was blocked by the browser. Select the text in the fields or use Prepare my email instead.'; }
-      });
-    })();
-  </script>
-</body>
-</html>
+<header class="wrap top"><a class="brand" href="index.html">kiln<span>.</span></a><nav aria-label="Primary"><a href="services.html">Services</a><a href="work.html">Experience</a><a href="sample.html">Live example</a><a href="security.html">Security</a><a class="nav-cta" href="start.html">Start a project</a></nav></header>
+<main>
+<section class="wrap start-hero"><a class="crumb" href="index.html">← Home</a><p class="eyebrow">Project enquiry</p><h1>What feels unclear in the business?</h1><p class="lead">No technical brief needed. Describe the report, question or decision that takes too much time.</p></section>
+<section class="wrap enquiry-layout">
+  <aside class="enquiry-guide"><p class="kicker">What happens next</p><ol><li><span>1</span><div><strong>Fit check</strong><p>Kiln reviews the problem and recommends the smallest useful start.</p></div></li><li><span>2</span><div><strong>Scope first</strong><p>Price, outputs, access and timing are agreed before work begins.</p></div></li></ol><div class="privacy-box"><strong>No files or passwords</strong><p>The form opens your email app. Review everything before sending.</p></div></aside>
+  <form class="enquiry-form" id="enquiryForm">
+    <div class="form-head"><p class="kicker">About three minutes</p><h2>Start here.</h2></div>
+    <label>Business type *<select id="businessType" required><option value="">Choose one</option><option>Independent consultant or freelancer</option><option>Coach or practitioner</option><option>Agency or service team</option><option>Other service business</option></select></label>
+    <label>What do you check or build by hand today? *<textarea id="currentProcess" rows="4" required placeholder="Every Friday I combine invoices, leads and project hours."></textarea></label>
+    <label>What decision should become easier? *<textarea id="desiredView" rows="4" required placeholder="I want to know whether I can take another client next month."></textarea></label>
+    <label>Tools or files involved<input id="tools" type="text" placeholder="Excel, Moneybird, Stripe, Notion, HubSpot..."></label>
+    <label>Starting point<select id="packageChoice"><option value="not-sure">Not sure—please recommend</option><option value="diagnostic">Diagnostic · €250 excl. VAT</option><option value="solo">Solo Dashboard · €1,250 excl. VAT</option><option value="business">Team Dashboard · €3,500 excl. VAT</option></select></label>
+    <label>Your email *<input id="replyEmail" type="email" required placeholder="you@business.com"></label>
+    <div class="form-actions"><button class="button primary" type="submit">Prepare email</button><button class="button" type="button" id="copyEnquiry">Copy answers</button></div>
+    <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+  </form>
+</section>
+</main>
+<footer><div class="wrap"><div class="footer-grid"><a class="brand" href="index.html">kiln<span>.</span></a><div class="footer-links"><a href="services.html">Services</a><a href="work.html">Experience</a><a href="sample.html">Live example</a><a href="security.html">Security</a><a href="privacy.html">Privacy</a></div></div><p class="legal">Kiln Life · Netherlands · KvK: 42183356</p></div></footer>
+<script>
+(() => {
+  const form=document.getElementById('enquiryForm');const status=document.getElementById('formStatus');
+  const ids=['businessType','currentProcess','desiredView','tools','packageChoice','replyEmail'];
+  const labels={businessType:'Business type',currentProcess:'Current manual process',desiredView:'Decision to improve',tools:'Tools or files',packageChoice:'Starting point',replyEmail:'Reply email'};
+  const requested=new URLSearchParams(location.search).get('package');
+  if(requested&&[...document.getElementById('packageChoice').options].some(o=>o.value===requested))document.getElementById('packageChoice').value=requested;
+  const message=()=>ids.map(id=>`${labels[id]}:\n${document.getElementById(id).value.trim()||'Not provided'}`).join('\n\n');
+  form.addEventListener('submit',event=>{event.preventDefault();if(!form.reportValidity())return;status.textContent='Opening your email app. Review the message before sending.';location.href=`mailto:somin@kiln.life?subject=${encodeURIComponent('Kiln dashboard enquiry')}&body=${encodeURIComponent(`Hello Kiln,\n\n${message()}\n\nI have not included passwords or confidential records.`)}`});
+  document.getElementById('copyEnquiry').addEventListener('click',async()=>{if(!form.reportValidity())return;try{await navigator.clipboard.writeText(message());status.textContent='Answers copied.'}catch{status.textContent='Copy was blocked. Use Prepare email instead.'}});
+})();
+</script>
+</body></html>

@@ -3,165 +3,88 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Kiln — Your business, visible. Your next move, clear.</title>
-  <meta name="description" content="Kiln builds clear business dashboards for independent professionals and small service businesses—bringing revenue, customers, workload and next actions into one view.">
+  <title>Kiln — See the business. Make the next move.</title>
+  <meta name="description" content="Kiln builds clear business dashboards for independent professionals and small service teams—bringing money, customers, workload and next actions into one view.">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <meta property="og:type" content="website"><meta property="og:site_name" content="Kiln"><meta property="og:title" content="Your business, visible. Your next move, clear."><meta property="og:description" content="Clear business dashboards for independent professionals and small service businesses."><meta property="og:url" content="https://kiln.life/"><meta property="og:image" content="https://kiln.life/og-card.png"><meta name="twitter:card" content="summary_large_image">
+  <meta property="og:type" content="website"><meta property="og:site_name" content="Kiln"><meta property="og:title" content="See the business. Make the next move."><meta property="og:description" content="Clear business dashboards for independent professionals and small service teams."><meta property="og:url" content="https://kiln.life/"><meta property="og:image" content="https://kiln.life/og-card.png"><meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="site.css">
 </head>
-<body>
-  <header class="wrap top">
-    <a class="brand" href="index.html">kiln<span>.</span></a>
-    <nav aria-label="Primary">
-      <a href="services.html">Services</a>
-      <a href="work.html">Experience</a>
-      <a href="sample.html">Live prototype</a>
-      <a href="security.html">Security</a>
-      <a class="nav-cta" href="start.html">Start here</a>
-    </nav>
+<body class="home-v3">
+  <header class="v3-nav v3-wrap">
+    <a class="v3-brand" href="index.html" aria-label="Kiln home">kiln<span>.</span></a>
+    <nav aria-label="Primary"><a href="#product">Product</a><a href="#examples">Examples</a><a href="#pricing">Pricing</a><a href="security.html">Security</a></nav>
+    <a class="v3-nav-cta" href="start.html">Start a project <span>↗</span></a>
   </header>
 
   <main>
-    <section class="wrap console-hero">
-      <div class="console-hero-copy">
-        <p class="eyebrow">Business dashboards for independent professionals</p>
-        <h1>Your business,<br>visible.</h1>
-        <p class="console-tagline">Your next move, clear.</p>
-        <p class="hero-lead">See revenue, pipeline, cash and workload in one view—plus the next decision.</p>
-        <div class="actions">
-          <a class="button primary" href="#business-example">See a business like yours</a>
-          <a class="button" href="services.html">See packages and pricing</a>
-        </div>
-        <div class="hero-trust"><span>No AI knowledge required</span><span>You own the finished dashboard</span><span>Fixed-scope projects from €1,250</span></div>
+    <section class="v3-hero v3-wrap">
+      <div class="v3-hero-copy">
+        <p class="v3-overline">Decision dashboards for service businesses</p>
+        <h1>See the business.<br><em>Make the next move.</em></h1>
+        <p class="v3-lead">Money, customers and workload—connected in one clear view.</p>
+        <div class="v3-actions"><a class="v3-button v3-primary" href="start.html">Start a project</a><a class="v3-button" href="sample.html">Open live example <span>↗</span></a></div>
+        <div class="v3-proofline"><span>Custom build</span><i></i><span>No subscription</span><i></i><span>From €1,250</span></div>
       </div>
 
-      <div class="business-console" id="live-dashboard" aria-label="Interactive small business dashboard prototype">
-        <div class="console-topbar">
-          <div><span class="console-dot"></span><strong>Business dashboard</strong></div>
-          <span class="console-status">Live prototype</span>
+      <div class="v3-product" id="product" aria-label="Interactive business dashboard preview">
+        <div class="v3-product-head"><div><span class="v3-live"></span><b>Interactive example · Sample data</b></div><span id="v3Period">This month</span></div>
+        <div class="v3-view-tabs" role="tablist" aria-label="Dashboard view"><button class="active" type="button" data-view="overview" aria-selected="true">Overview</button><button type="button" data-view="sales" aria-selected="false">Sales</button><button type="button" data-view="delivery" aria-selected="false">Delivery</button></div>
+        <div class="v3-kpi-row">
+          <div><small id="v3LabelA">Revenue</small><strong id="v3ValueA">€42.8k</strong><span id="v3DeltaA">+12%</span></div>
+          <div><small id="v3LabelB">Pipeline</small><strong id="v3ValueB">€68k</strong><span id="v3DeltaB">+8%</span></div>
+          <div><small id="v3LabelC">Capacity</small><strong id="v3ValueC">84%</strong><span id="v3DeltaC" class="warm">Near limit</span></div>
         </div>
-        <div class="console-tabs" role="tablist" aria-label="Business dashboard views">
-          <button class="console-tab active" type="button" data-console="overview">Overview</button>
-          <button class="console-tab" type="button" data-console="sales">Sales</button>
-          <button class="console-tab" type="button" data-console="delivery">Delivery</button>
-        </div>
-        <div class="console-body">
-          <div class="console-period"><span id="viewLabel">Owner overview</span><span id="consolePeriod">Last 30 days</span></div>
-          <div class="console-kpis">
-            <div class="console-kpi"><small>Revenue</small><strong id="kpiRevenue">€42.8k</strong><span id="kpiRevenueDelta" class="up">↑ 12%</span></div>
-            <div class="console-kpi"><small>Qualified pipeline</small><strong id="kpiPipeline">€68k</strong><span id="kpiPipelineDelta" class="up">↑ 8%</span></div>
-            <div class="console-kpi"><small>Delivery capacity</small><strong id="kpiCapacity">84%</strong><span id="kpiCapacityDelta" class="warn">Near limit</span></div>
-            <div class="console-kpi"><small>Cash runway</small><strong id="kpiRunway">7.4 mo</strong><span id="kpiRunwayDelta">Stable</span></div>
+        <div class="v3-product-main">
+          <div class="v3-chart-panel">
+            <div class="v3-panel-label"><span id="v3ChartLabel">Revenue + pipeline</span><span>6 months</span></div>
+            <svg class="v3-chart" viewBox="0 0 540 220" role="img" aria-label="Six month business trend chart"><defs><linearGradient id="areaGlow" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#B9E769" stop-opacity=".32"/><stop offset="1" stop-color="#B9E769" stop-opacity="0"/></linearGradient></defs><g class="v3-grid"><path d="M20 35H520M20 85H520M20 135H520M20 185H520"/></g><path id="v3Area" class="v3-area" d="M20 174 C70 168 90 150 120 151 S180 127 220 130 S290 104 330 110 S395 72 430 79 S485 45 520 51 L520 200 L20 200Z"/><path id="v3Line" class="v3-line" d="M20 174 C70 168 90 150 120 151 S180 127 220 130 S290 104 330 110 S395 72 430 79 S485 45 520 51"/><g class="v3-dots"><circle cx="20" cy="174" r="4"/><circle cx="120" cy="151" r="4"/><circle cx="220" cy="130" r="4"/><circle cx="330" cy="110" r="4"/><circle cx="430" cy="79" r="4"/><circle cx="520" cy="51" r="5"/></g></svg>
+            <div class="v3-months"><span>May</span><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span></div>
           </div>
-          <div class="console-main-grid">
-            <div class="console-chart-card">
-              <div class="console-card-head"><strong id="chartTitle">Revenue &amp; pipeline</strong><span>6 months</span></div>
-              <div class="console-chart" id="consoleChart" aria-hidden="true">
-                <span style="height:34%"></span><span style="height:43%"></span><span style="height:40%"></span><span style="height:56%"></span><span style="height:68%"></span><span style="height:82%"></span>
-              </div>
-              <div class="console-chart-labels"><span>May</span><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span></div>
-            </div>
-            <div class="decision-card">
-              <span class="decision-label">Decision now</span>
-              <h3 id="decisionTitle">Protect capacity before adding leads.</h3>
-              <p id="decisionText">Likely deals exceed next month’s delivery capacity.</p>
-              <ul id="decisionActions"><li>Confirm the top three close dates.</li><li>Reserve freelance capacity.</li></ul>
-            </div>
-          </div>
-          <div class="console-sources"><span>CRM</span><b>+</b><span>Accounting</span><b>+</b><span>Projects</span><b>+</b><span>Marketing</span><strong>→ one operating view</strong></div>
+          <div class="v3-decision-panel"><span>Decision now</span><strong id="v3Decision">Protect capacity before adding leads.</strong><a href="sample.html">See why <b>↗</b></a></div>
         </div>
+        <div class="v3-signal-row" aria-hidden="true"><span>CRM</span><b>→</b><span>Accounting</span><b>→</b><span>Projects</span><b>→</b><strong>One owner view</strong></div>
       </div>
     </section>
 
-    <section class="wrap plain-explainer" aria-labelledby="plain-title">
-      <div><p class="kicker">What you are buying</p><h2 id="plain-title">Less checking. More knowing what to do.</h2></div>
-      <div class="plain-steps">
-        <article><span>01</span><h3>Show what you use</h3><p>Your current spreadsheet, invoices or weekly report.</p></article>
-        <article><span>02</span><h3>Bring the numbers together</h3><p>Only the information needed for one useful view.</p></article>
-        <article><span>03</span><h3>See the next move</h3><p>Changes, risks and priorities—ready for your decision.</p></article>
-        <a class="text-cta" href="value.html">Estimate the cost of your current manual reporting →</a>
+    <section class="v3-trust"><div class="v3-wrap v3-trust-inner"><span>Built from hands-on work in</span><strong>Product analytics</strong><i></i><strong>KPI design</strong><i></i><strong>SQL + Tableau</strong><i></i><strong>AI workflows</strong></div></section>
+
+    <section class="v3-system v3-wrap" aria-labelledby="system-title">
+      <div class="v3-section-intro"><p class="v3-overline">One connected system</p><h2 id="system-title">Scattered data in.<br>Clear decision out.</h2></div>
+      <div class="v3-flow-canvas">
+        <div class="v3-flow-sources"><div><span class="v3-source-icon">€</span><p>Invoices</p></div><div><span class="v3-source-icon">↗</span><p>Leads</p></div><div><span class="v3-source-icon">◫</span><p>Projects</p></div><div><span class="v3-source-icon">◷</span><p>Calendar</p></div></div>
+        <svg class="v3-connectors" viewBox="0 0 1160 400" preserveAspectRatio="none" aria-hidden="true"><path d="M100 62 C300 62 310 200 490 200"/><path d="M100 154 C300 154 310 200 490 200"/><path d="M100 246 C300 246 310 200 490 200"/><path d="M100 338 C300 338 310 200 490 200"/><path class="hot" d="M670 200 C820 200 830 200 1010 200"/></svg>
+        <div class="v3-flow-core"><span>Weekly view</span><div class="v3-ring"><b>5</b><small>signals</small></div><div class="v3-mini-bars"><i style="height:38%"></i><i style="height:56%"></i><i style="height:48%"></i><i style="height:72%"></i><i style="height:88%"></i></div></div>
+        <div class="v3-flow-output"><span>Next move</span><strong>Hold two days for sales.</strong><small>Capacity stays below 85%</small></div>
       </div>
     </section>
 
-    <section class="owner-examples" id="business-example" aria-labelledby="examples-title">
-      <div class="wrap">
-        <div class="section-head compact-head"><div><p class="kicker">Illustrative walkthrough</p><h2 id="examples-title">From scattered numbers to one decision.</h2></div><p>Choose a business type. The example figures are synthetic; the decision pattern is what Kiln builds around your real business.</p></div>
-        <div class="example-tabs" role="tablist" aria-label="Choose an illustrative business">
-          <button class="example-tab active" type="button" data-example="consultant" aria-selected="true">Independent consultant</button>
-          <button class="example-tab" type="button" data-example="agency" aria-selected="false">Small agency</button>
-          <button class="example-tab" type="button" data-example="coach" aria-selected="false">Coach or practitioner</button>
-        </div>
-        <div class="walkthrough-grid">
-          <article class="walkthrough-card before-card"><span class="walkthrough-num">01 · Before</span><h3 id="exampleQuestion">Do I need more leads—or more room to deliver?</h3><div class="source-pills" id="exampleSources"><span>Email leads</span><span>Calendar</span><span>Invoices</span><span>Spreadsheet</span></div><p id="exampleBefore">The answer is split across four places and estimated manually.</p></article>
-          <article class="walkthrough-card dashboard-card"><span class="walkthrough-num">02 · One owner view</span><div class="walkthrough-metrics"><div><strong id="exampleMetricOne">68%</strong><small id="exampleLabelOne">next month booked</small></div><div><strong id="exampleMetricTwo">€18k</strong><small id="exampleLabelTwo">confirmed revenue</small></div><div><strong id="exampleMetricThree">6 days</strong><small id="exampleLabelThree">still available</small></div></div><p id="exampleDashboard">Confirmed work, likely deals and free delivery days are visible together.</p></article>
-          <article class="walkthrough-card action-card"><span class="walkthrough-num">03 · Decision</span><p class="decision-prompt">Next move</p><h3 id="exampleDecision">Keep two days available for sales.</h3><p id="exampleReason">Do not fill the month with lower-margin work before the strongest leads are decided.</p><a id="exampleLink" href="sample.html?business=consultant">Explore the interactive example →</a></article>
-        </div>
+    <section class="v3-examples" id="examples"><div class="v3-wrap">
+      <div class="v3-section-intro v3-section-row"><div><p class="v3-overline">Built around your business</p><h2>Choose your view.</h2></div><div class="v3-audience-tabs" role="tablist" aria-label="Business example"><button class="active" type="button" data-example="consultant" aria-selected="true">Independent</button><button type="button" data-example="agency" aria-selected="false">Small team</button><button type="button" data-example="coach" aria-selected="false">Appointments</button></div></div>
+      <div class="v3-example-stage">
+        <div class="v3-example-question"><span>Question</span><h3 id="v3ExampleQuestion">More leads—or more room to deliver?</h3><a id="v3ExampleLink" href="sample.html?business=consultant">Explore this example ↗</a></div>
+        <div class="v3-example-visual"><div class="v3-gauge"><svg viewBox="0 0 180 100" aria-hidden="true"><path d="M20 88 A70 70 0 0 1 160 88"/><path id="v3Gauge" class="fill" d="M20 88 A70 70 0 0 1 145 45"/></svg><strong id="v3ExampleMain">68%</strong><small id="v3ExampleMainLabel">next month booked</small></div><div class="v3-example-metrics"><div><small id="v3ExampleLabel2">Confirmed revenue</small><strong id="v3ExampleValue2">€18k</strong></div><div><small id="v3ExampleLabel3">Still available</small><strong id="v3ExampleValue3">6 days</strong></div></div></div>
+        <div class="v3-example-decision"><span>Decision</span><strong id="v3ExampleDecision">Keep two days open for sales.</strong><div class="v3-action-state"><i></i><small>Ready to act</small></div></div>
       </div>
+    </div></section>
+
+    <section class="v3-pricing v3-wrap" id="pricing" aria-labelledby="pricing-title">
+      <div class="v3-section-intro v3-section-row"><div><p class="v3-overline">Simple starting points</p><h2 id="pricing-title">Start small. Keep what works.</h2></div><a href="services.html">Full scope and pricing ↗</a></div>
+      <div class="v3-price-row"><a href="services.html#diagnostic"><span>01</span><div><small>Find the right view</small><strong>Diagnostic</strong></div><b>€250</b><i>↗</i></a><a class="recommended" href="services.html#solo"><span>02</span><div><small>Best for independent businesses</small><strong>Solo dashboard</strong></div><b>€1,250</b><i>↗</i></a><a href="services.html#business"><span>03</span><div><small>Connect a small team</small><strong>Team dashboard</strong></div><b>€3,500</b><i>↗</i></a></div>
+      <p class="v3-vat">Excl. VAT · No files before scope · Access agreed first · Handover included</p>
     </section>
 
-    <section class="wrap artifact-section" aria-labelledby="artifacts-title">
-      <div class="section-head compact-head"><div><p class="kicker">What you receive</p><h2 id="artifacts-title">Useful after the project ends.</h2></div><p>Editable business tools—not a presentation that disappears after one meeting.</p></div>
-      <div class="artifact-grid">
-        <article class="artifact-card"><div class="artifact-preview map-preview"><span>Decision</span><b>→</b><span>5 KPIs</span><b>→</b><span>Sources</span></div><h3>KPI and data map</h3><p>What each number means, where it comes from and who uses it.</p></article>
-        <article class="artifact-card"><div class="artifact-preview dashboard-preview"><div><span>Revenue</span><strong>€42.8k</strong></div><div><span>Capacity</span><strong>84%</strong></div><i></i><i></i><i></i><i></i></div><h3>Working dashboard</h3><p>One owner view connected to the business question you need to answer.</p></article>
-        <article class="artifact-card"><div class="artifact-preview brief-preview"><small>Weekly owner brief</small><strong>Protect capacity before adding leads.</strong><span>2 actions ready</span></div><h3>Decision brief</h3><p>What changed, why it matters and what needs your judgment next.</p></article>
-      </div>
-      <a class="text-cta" href="deliverables.html">Inspect every deliverable →</a>
-    </section>
-
-    <section class="wrap section offer-section" id="offers">
-      <div class="section-head compact-head"><div><p class="kicker">Start at the right size</p><h2>Clear scope. Fixed price.</h2></div><p>Begin with one useful operating view. Add complexity only when it earns its place.</p></div>
-      <div class="offer-path clear-offers">
-        <article class="offer-step"><span class="offer-fit">Start here if you are unsure</span><span class="offer-num">01 · Diagnose</span><h3>Dashboard Diagnostic</h3><p>Leave with five essential KPIs, a source map and a first-view sketch.</p><span class="price">60 minutes · €250 excl. VAT</span><a href="services.html#diagnostic">See the named outputs →</a></article>
-        <article class="offer-step featured-offer"><span class="offer-fit">Most independent businesses start here</span><span class="offer-num">02 · Build for one owner</span><h3>Solo Business Dashboard</h3><p>A working owner view, metric definitions and handover.</p><span class="price">About 2 weeks · €1,250 excl. VAT</span><a href="services.html#solo">See the complete scope →</a></article>
-        <article class="offer-step"><span class="offer-fit">For multiple people or systems</span><span class="offer-num">03 · Run the team</span><h3>Small Business Dashboard</h3><p>Connected numbers, automatic refresh and a decision brief.</p><span class="price">About 3 weeks · €3,500 excl. VAT</span><a href="services.html#business">See the complete scope →</a></article>
-      </div>
-    </section>
-
-    <section class="wrap proof-strip">
-      <div><p class="kicker">Relevant background</p><h2>Built from real product, reporting and AI delivery work.</h2></div>
-      <div class="proof-points"><p><strong>Commercial measurement</strong><br>SQL, KPI design and Tableau reporting.</p><p><strong>Complex digital delivery</strong><br>Products and workflows across five platforms and regions.</p><p><strong>Applied AI products</strong><br>LLM workflows with quality checks and human review.</p><a class="button" href="work.html">See the background</a></div>
-    </section>
-
-    <section class="final-cta"><div class="wrap final-grid"><h2>Start with your five essential numbers.</h2><div><p>Describe the report you build today. No technical language required.</p><a class="button" href="start.html">Map my starting point</a></div></div></section>
+    <section class="v3-close"><div class="v3-wrap v3-close-inner"><div><p class="v3-overline">No technical brief needed</p><h2>Start with one decision.</h2></div><a class="v3-button v3-light" href="start.html">Start a project <span>↗</span></a></div></section>
   </main>
 
-  <footer><div class="wrap"><div class="footer-grid"><a class="brand" href="index.html">kiln<span>.</span></a><div class="footer-links"><a href="services.html">Services</a><a href="work.html">Experience</a><a href="deliverables.html">Deliverables</a><a href="sample.html">Prototype</a><a href="value.html">Cost check</a><a href="security.html">Security</a><a href="privacy.html">Privacy</a></div></div><p class="legal">Kiln Life · Netherlands · KvK: 42183356 · <a href="start.html">Contact</a></p></div></footer>
+  <footer class="v3-footer"><div class="v3-wrap"><div><a class="v3-brand" href="index.html">kiln<span>.</span></a><p>Business visibility for better decisions.</p></div><div class="v3-footer-links"><a href="services.html">Services</a><a href="work.html">Experience</a><a href="sample.html">Live example</a><a href="security.html">Security</a><a href="privacy.html">Privacy</a><a href="start.html">Contact</a></div><p class="v3-legal">Kiln Life · Netherlands · KvK: 42183356</p></div></footer>
 
   <script>
     (() => {
-      const states = {
-        overview: {label:'Owner overview',period:'Last 30 days',chart:'Revenue & pipeline', revenue:'€42.8k', revenueDelta:'↑ 12%', pipeline:'€68k', pipelineDelta:'↑ 8%', capacity:'84%', capacityDelta:'Near limit', runway:'7.4 mo', runwayDelta:'Stable', bars:[34,43,40,56,68,82], title:'Protect capacity before adding leads.', text:'Likely deals exceed next month’s delivery capacity.', actions:['Confirm the top three close dates.','Reserve freelance capacity.']},
-        sales: {label:'Sales view',period:'Current pipeline',chart:'Pipeline by stage', revenue:'€42.8k', revenueDelta:'↑ 12%', pipeline:'€92k', pipelineDelta:'↑ 35%', capacity:'84%', capacityDelta:'Near limit', runway:'7.4 mo', runwayDelta:'Stable', bars:[23,31,46,58,72,91], title:'Focus on the deals most likely to close.', text:'Nearly half of the pipeline is still early-stage.', actions:['Prioritise confirmed budgets.','Follow up stalled decisions.']},
-        delivery: {label:'Delivery view',period:'Next 30 days',chart:'Committed workload', revenue:'€42.8k', revenueDelta:'↑ 12%', pipeline:'€68k', pipelineDelta:'↑ 8%', capacity:'96%', capacityDelta:'Over limit', runway:'7.4 mo', runwayDelta:'Stable', bars:[52,61,66,78,88,96], title:'Add support before accepting more work.', text:'Next month is already above sustainable capacity.', actions:['Reserve support for peak weeks.','Move one low-margin project.']}
-      };
-      const ids = ['Revenue','RevenueDelta','Pipeline','PipelineDelta','Capacity','CapacityDelta','Runway','RunwayDelta'];
-      document.querySelectorAll('.console-tab').forEach(tab => tab.addEventListener('click', () => {
-        document.querySelectorAll('.console-tab').forEach(t => t.classList.toggle('active', t === tab));
-        const state = states[tab.dataset.console];
-        document.getElementById('viewLabel').textContent = state.label;
-        document.getElementById('consolePeriod').textContent = state.period;
-        document.getElementById('chartTitle').textContent = state.chart;
-        ids.forEach(id => document.getElementById('kpi' + id).textContent = state[id.charAt(0).toLowerCase() + id.slice(1)]);
-        document.querySelectorAll('#consoleChart span').forEach((bar, i) => bar.style.height = state.bars[i] + '%');
-        document.getElementById('decisionTitle').textContent = state.title;
-        document.getElementById('decisionText').textContent = state.text;
-        document.getElementById('decisionActions').innerHTML = state.actions.map(a => `<li>${a}</li>`).join('');
-      }));
-      const examples = {
-        consultant:{question:'Do I need more leads—or more room to deliver?',sources:['Email leads','Calendar','Invoices','Spreadsheet'],before:'The answer is split across four places and estimated manually.',metrics:[['68%','next month booked'],['€18k','confirmed revenue'],['6 days','still available']],dashboard:'Confirmed work, likely deals and free delivery days are visible together.',decision:'Keep two days available for sales.',reason:'Do not fill the month with lower-margin work before the strongest leads are decided.',href:'sample.html?business=consultant'},
-        agency:{question:'Can we take the next project without hurting delivery?',sources:['CRM','Project plan','Timesheets','Accounting'],before:'Pipeline and workload are reviewed separately, so the constraint appears late.',metrics:[['96%','delivery capacity'],['€42k','qualified pipeline'],['1 project','below target margin']],dashboard:'Likely sales, committed work and project margin are compared in one view.',decision:'Reserve support before accepting the next project.',reason:'The pipeline is healthy, but next month is already above sustainable capacity.',href:'sample.html?business=agency'},
-        coach:{question:'Is the booking gap caused by retention or demand?',sources:['Booking tool','Payments','Client list','Calendar'],before:'Open appointments are visible, but the reason behind them is not.',metrics:[['7','open appointments'],['41%','repeat bookings'],['72%','schedule filled']],dashboard:'Bookings, returning clients and unused time show where the gap starts.',decision:'Rebook current clients before increasing ad spend.',reason:'Retention is the clearer near-term opportunity; test demand after the rebooking cycle.',href:'sample.html?business=coach'}
-      };
-      const exampleIds=['Question','Before','Dashboard','Decision','Reason'];
-      document.querySelectorAll('.example-tab').forEach(tab => tab.addEventListener('click', () => {
-        const selected=examples[tab.dataset.example];
-        document.querySelectorAll('.example-tab').forEach(button=>{button.classList.toggle('active',button===tab);button.setAttribute('aria-selected',button===tab?'true':'false')});
-        exampleIds.forEach(id=>document.getElementById('example'+id).textContent=selected[id.toLowerCase()]);
-        document.getElementById('exampleSources').innerHTML=selected.sources.map(source=>`<span>${source}</span>`).join('');
-        selected.metrics.forEach((metric,index)=>{const suffix=['One','Two','Three'][index];document.getElementById('exampleMetric'+suffix).textContent=metric[0];document.getElementById('exampleLabel'+suffix).textContent=metric[1]});
-        document.getElementById('exampleLink').href=selected.href;
-      }));
+      const views={overview:{period:'This month',labels:['Revenue','Pipeline','Capacity'],values:['€42.8k','€68k','84%'],deltas:['+12%','+8%','Near limit'],chart:'Revenue + pipeline',decision:'Protect capacity before adding leads.',line:'M20 174 C70 168 90 150 120 151 S180 127 220 130 S290 104 330 110 S395 72 430 79 S485 45 520 51',area:'M20 174 C70 168 90 150 120 151 S180 127 220 130 S290 104 330 110 S395 72 430 79 S485 45 520 51 L520 200 L20 200Z'},sales:{period:'Current pipeline',labels:['Won','Qualified','Follow-up'],values:['€18k','€42k','7'],deltas:['+20%','+14%','3 urgent'],chart:'Pipeline by stage',decision:'Follow up the three closest deals.',line:'M20 182 C80 179 85 165 120 165 S185 150 220 142 S295 121 330 116 S390 96 430 78 S486 68 520 40',area:'M20 182 C80 179 85 165 120 165 S185 150 220 142 S295 121 330 116 S390 96 430 78 S486 68 520 40 L520 200 L20 200Z'},delivery:{period:'Next 30 days',labels:['Capacity','Projects','At risk'],values:['96%','8','1'],deltas:['Over limit','2 closing','Margin'],chart:'Committed workload',decision:'Reserve support before new work.',line:'M20 165 C65 155 85 139 120 136 S185 113 220 105 S286 82 330 77 S398 49 430 45 S487 36 520 34',area:'M20 165 C65 155 85 139 120 136 S185 113 220 105 S286 82 330 77 S398 49 430 45 S487 36 520 34 L520 200 L20 200Z'}};
+      const suffixes=['A','B','C'];
+      document.querySelectorAll('.v3-view-tabs button').forEach(button=>button.addEventListener('click',()=>{const view=views[button.dataset.view];document.querySelectorAll('.v3-view-tabs button').forEach(item=>{const on=item===button;item.classList.toggle('active',on);item.setAttribute('aria-selected',String(on))});document.getElementById('v3Period').textContent=view.period;suffixes.forEach((suffix,index)=>{document.getElementById('v3Label'+suffix).textContent=view.labels[index];document.getElementById('v3Value'+suffix).textContent=view.values[index];document.getElementById('v3Delta'+suffix).textContent=view.deltas[index]});document.getElementById('v3ChartLabel').textContent=view.chart;document.getElementById('v3Decision').textContent=view.decision;document.getElementById('v3Line').setAttribute('d',view.line);document.getElementById('v3Area').setAttribute('d',view.area)}));
+      const examples={consultant:{question:'More leads—or more room to deliver?',main:'68%',mainLabel:'next month booked',label2:'Confirmed revenue',value2:'€18k',label3:'Still available',value3:'6 days',decision:'Keep two days open for sales.',href:'sample.html?business=consultant',gauge:'M20 88 A70 70 0 0 1 145 45'},agency:{question:'Can the team take the next project?',main:'96%',mainLabel:'delivery capacity',label2:'Qualified pipeline',value2:'€42k',label3:'Below target margin',value3:'1 project',decision:'Reserve support before accepting.',href:'sample.html?business=agency',gauge:'M20 88 A70 70 0 0 1 158 74'},coach:{question:'Is the gap retention or demand?',main:'72%',mainLabel:'schedule filled',label2:'Repeat bookings',value2:'41%',label3:'Open appointments',value3:'7',decision:'Rebook clients before more ads.',href:'sample.html?business=coach',gauge:'M20 88 A70 70 0 0 1 149 50'}};
+      document.querySelectorAll('.v3-audience-tabs button').forEach(button=>button.addEventListener('click',()=>{const x=examples[button.dataset.example];document.querySelectorAll('.v3-audience-tabs button').forEach(item=>{const on=item===button;item.classList.toggle('active',on);item.setAttribute('aria-selected',String(on))});document.getElementById('v3ExampleQuestion').textContent=x.question;document.getElementById('v3ExampleMain').textContent=x.main;document.getElementById('v3ExampleMainLabel').textContent=x.mainLabel;document.getElementById('v3ExampleLabel2').textContent=x.label2;document.getElementById('v3ExampleValue2').textContent=x.value2;document.getElementById('v3ExampleLabel3').textContent=x.label3;document.getElementById('v3ExampleValue3').textContent=x.value3;document.getElementById('v3ExampleDecision').textContent=x.decision;document.getElementById('v3ExampleLink').href=x.href;document.getElementById('v3Gauge').setAttribute('d',x.gauge)}));
     })();
   </script>
 </body>
